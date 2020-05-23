@@ -1,0 +1,101 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat May 23 12:03:29 2020
+| Host         : LAPTOP-IMS9VLRH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
+| Design       : top_level
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    34 |
+| Unused register locations in slices containing registers |    64 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            5 |
+|      4 |            2 |
+|      8 |           21 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              41 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             135 |           35 |
+| Yes          | No                    | No                     |              20 |            4 |
+| Yes          | No                    | Yes                    |             128 |           43 |
+| Yes          | Yes                   | No                     |              28 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-------------------------------+-----------------------------+------------------+----------------+
+|      Clock Signal     |         Enable Signal         |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++-----------------------+-------------------------------+-----------------------------+------------------+----------------+
+|  d4/u1/slow_clk_reg_0 |                               |                             |                1 |              2 |
+|  d2/u1/slow_clk_reg_0 |                               |                             |                1 |              2 |
+|  d1/u1/slow_clk       |                               |                             |                1 |              2 |
+|  d5/u1/slow_clk_reg_0 |                               |                             |                1 |              2 |
+|  d3/u1/slow_clk_reg_0 |                               |                             |                1 |              2 |
+|  clock_IBUF_BUFG      | d3/d2/Q_reg_1[0]              | master_reset_IBUF           |                1 |              4 |
+|  clock_IBUF_BUFG      | d1/d1/Q_reg_3[0]              |                             |                1 |              4 |
+|  clock_IBUF_BUFG      | d5/d2/counter_value01_out     | d5/d2/counter_value0        |                2 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0]_3[0] | reseted                     |                6 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0][0]   | reseted                     |                3 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[1]_0[0] | reseted                     |                7 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0]_2[0] | reseted                     |                3 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[1]_1[0] | reseted                     |                1 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/Q_reg_6[0]              | reseted                     |                3 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/Q_reg_1[0]              | reseted                     |                3 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0]_6[0] | reseted                     |                1 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/Q_reg_4[0]              | reseted                     |                3 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0]_4[0] | reseted                     |                1 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0]_5[0] | reseted                     |                5 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[1][0]   | reseted                     |                2 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0]_0[0] | reseted                     |                1 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/Q_reg_5[0]              | reseted                     |                1 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/E[0]                    | reseted                     |                2 |              8 |
+|  clock_IBUF_BUFG      | d1/d1/mem_address_reg[0]_1[0] | reseted                     |                1 |              8 |
+|  clock_IBUF_BUFG      | d2/d1/E[0]                    | master_reset_IBUF           |                5 |              8 |
+|  clock_IBUF_BUFG      | d3/d1/Q_reg_1                 | master_reset_IBUF           |                2 |              8 |
+|  clock_IBUF_BUFG      | d3/d1/E[0]                    |                             |                1 |              8 |
+|  clock_IBUF_BUFG      | startcheck_reg_n_0            |                             |                2 |              8 |
+|  clock_IBUF_BUFG      |                               | d3/u1/counter[0]_i_1__1_n_0 |                7 |             27 |
+|  clock_IBUF_BUFG      |                               | d2/u1/counter[0]_i_1__0_n_0 |                7 |             27 |
+|  clock_IBUF_BUFG      |                               | d1/u1/clear                 |                7 |             27 |
+|  clock_IBUF_BUFG      |                               | d5/u1/counter[0]_i_1_n_0    |                7 |             27 |
+|  clock_IBUF_BUFG      |                               | d4/u1/counter[0]_i_1__3_n_0 |                7 |             27 |
+|  clock_IBUF_BUFG      |                               |                             |               15 |             31 |
++-----------------------+-------------------------------+-----------------------------+------------------+----------------+
+
+
